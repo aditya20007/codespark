@@ -1,0 +1,55 @@
+{
+  "about": "CodeSpark is a freelance web development team delivering complete end-to-end website solutions — from idea and design to development, deployment, and ongoing support. We help startups, businesses, and creators turn their vision into high-performing, scalable, and production-ready websites. What CodeSpark handles end-to-end: • Website Planning & UI/UX Design • Frontend & Backend Development • Database & API Integration • Domain, Hosting & Cloud Deployment • Performance, Security & SEO Optimization • Maintenance & Post-Launch Support Whether it’s a business website, portfolio, landing page, or a full web application, we take ownership of the entire process and ensure your product is fast, responsive, secure, and live without hassle. At CodeSpark, we believe in clean code, transparent communication, and delivering real value to our clients. 🚀 From idea → code → deployment → live website 💼 Open for freelance & long-term projects 📩 Let’s build something impactful together",
+  "services": [
+    {
+      "title": "Website Planning & UI/UX Design",
+      "description": "Crafting intuitive and visually appealing designs that align with your brand and user needs."
+    },
+    {
+      "title": "Frontend & Backend Development",
+      "description": "Building responsive, scalable websites using modern technologies like HTML, CSS, JavaScript, and frameworks."
+    },
+    {
+      "title": "Database & API Integration",
+      "description": "Seamlessly integrating databases and APIs for dynamic, data-driven applications."
+    },
+    {
+      "title": "Domain, Hosting & Cloud Deployment",
+      "description": "Managing domain registration, hosting setup, and cloud deployment for reliable performance."
+    },
+    {
+      "title": "Performance, Security & SEO Optimization",
+      "description": "Optimizing for speed, security, and search engine visibility to ensure top-notch user experience."
+    },
+    {
+      "title": "Maintenance & Post-Launch Support",
+      "description": "Providing ongoing support and updates to keep your website running smoothly."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Animal Care Management System",
+      "description": "SQL-based system to manage animal health records."
+    },
+    {
+      "title": "AI Collections System",
+      "description": "Predictive analytics model for delinquency detection."
+    },
+    {
+      "title": "CodeSpark Portfolio",
+      "description": "Professional agency-style website with smooth UX."
+    }
+  ],
+  "experiences": [
+    {
+      "title": "Web Developer Intern",
+      "company": "Bihar Dev Collective",
+      "description": "Built responsive websites using HTML, CSS, JavaScript, Next.js, MongoDB. Improved performance and UI consistency."
+    },
+    {
+      "title": "Data Analytics & ML Projects",
+      "company": "IIT Patna",
+      "description": "Worked on SQL databases, machine learning models, predictive analytics, and real-world data-driven systems."
+    }
+  ]
+}

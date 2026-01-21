@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | CodeSpark</title>
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main id="adminDashboard" class="admin-dashboard">
+
+    <header class="admin-header">
+      <h1>Admin Dashboard</h1>
+      <p class="admin-subtitle">Manage projects and experiences</p>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="admin-section">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <button id="addProjectBtn" class="admin-btn">Add Project</button>
+      </div>
+      <div id="projectsList" class="admin-list"></div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section class="admin-section">
+      <div class="section-header">
+        <h2>Experiences</h2>
+        <button id="addExperienceBtn" class="admin-btn">Add Experience</button>
+      </div>
+      <div id="experiencesList" class="admin-list"></div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
