@@ -15,14 +15,15 @@
     <header class="admin-header">
       <h1>Admin Dashboard</h1>
       <p class="admin-subtitle">Manage projects and experiences</p>
+      <button onclick="saveChanges()" class="admin-btn">Save Changes</button>
     </header>
 
     <!-- Projects Section -->
     <section class="admin-section">
-      <div class="section-header">
-        <h2>Projects</h2>
-        <button id="addProjectBtn" class="admin-btn">Add Project</button>
-      </div>
+    <div class="section-header">
+      <h2>Projects</h2>
+      <button id="addProjectBtn" class="admin-btn" onclick="addProject()">Add Project</button>
+    </div>
       <div id="projectsList" class="admin-list"></div>
     </section>
 

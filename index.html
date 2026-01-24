@@ -28,13 +28,12 @@
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="nav-left">
-    <img src="assets/logo.png" class="logo" alt="CodeSpark Logo">
+    <a href="#home"><img src="assets/logo.png" class="logo" alt="CodeSpark Logo"></a>
     <span>CodeSpark</span>
   </div>
 
   <nav id="navMenu">
     <a href="#home">Home</a>
-    <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
@@ -256,15 +255,7 @@
     });
   });
 
-  // Form submission feedback
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      const button = this.querySelector('button[type="submit"]');
-      button.textContent = 'Sending...';
-      button.disabled = true;
-    });
-  }
+  // Form submission feedback (removed to allow Netlify processing)
 
   // Navbar scroll effect
   let lastScroll = 0;

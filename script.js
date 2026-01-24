@@ -1,12 +1,21 @@
 // Load dynamic data
 async function loadData() {
   try {
+    // First try to load from localStorage (for admin changes)
+    const localProjects = JSON.parse(localStorage.getItem('projects') || 'null');
+    const localExperiences = JSON.parse(localStorage.getItem('experiences') || 'null');
+
     const response = await fetch('data.json');
     const data = await response.json();
+
+    // Use localStorage data if available, otherwise use data.json
+    const projects = localProjects || data.projects;
+    const experiences = localExperiences || data.experiences;
+
     renderAbout(data.about);
     renderServices(data.services);
-    renderProjects(data.projects);
-    renderExperiences(data.experiences);
+    renderProjects(projects);
+    renderExperiences(experiences);
   } catch (error) {
     console.error('Error loading data:', error);
   }
@@ -231,6 +240,10 @@ function deleteProject(index) {
     // Remove from DOM
     const item = document.querySelector(`#projectsList .editable-item:nth-child(${index + 1})`);
     if (item) item.remove();
+    // Update localStorage
+    const projects = JSON.parse(localStorage.getItem('projects') || '[]');
+    projects.splice(index, 1);
+    localStorage.setItem('projects', JSON.stringify(projects));
   }
 }
 
@@ -239,6 +252,10 @@ function deleteExperience(index) {
     // Remove from DOM
     const item = document.querySelector(`#experiencesList .editable-item:nth-child(${index + 1})`);
     if (item) item.remove();
+    // Update localStorage
+    const experiences = JSON.parse(localStorage.getItem('experiences') || '[]');
+    experiences.splice(index, 1);
+    localStorage.setItem('experiences', JSON.stringify(experiences));
   }
 }
 
@@ -249,6 +266,7 @@ function addProject() {
   div.innerHTML = `
     <input type="text" value="New Project" data-field="title">
     <textarea data-field="description">Project description</textarea>
+    <button onclick="updateProject(${container.children.length})">Update</button>
     <button onclick="deleteProject(${container.children.length})">Delete</button>
   `;
   container.appendChild(div);
@@ -262,6 +280,7 @@ function addExperience() {
     <input type="text" value="New Experience" data-field="title">
     <input type="text" value="Company" data-field="company">
     <textarea data-field="description">Experience description</textarea>
+    <button onclick="updateExperience(${container.children.length})">Update</button>
     <button onclick="deleteExperience(${container.children.length})">Delete</button>
   `;
   container.appendChild(div);
